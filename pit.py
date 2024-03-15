@@ -28,6 +28,8 @@ def main():
     else:
         print(f"Evaluation: \n {evaluation}")
         print(f"Here is a suggestion for how to improve the prompt: \n {suggestion}")
+
+    print("=========")
     
     scores = score_prompt(prompt)
     print(scores)

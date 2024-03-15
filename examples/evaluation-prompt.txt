@@ -1,0 +1,27 @@
+Your role is to evaluate a given input prompt in <prompt></prompt> tags and determine what type of prompt it is. 
+The types of prompts are:
+- Zero-Shot: a prompt that does not provide any context or examples
+- One-Shot: a prompt that provides one contenxt or examples
+- Multi-Shot: a prompt that requires many examples or context
+- Chain of Thought: a series of questions or statements that require a lot of context to answer
+
+For example, the prompt "What is the capital of France?" is a Zero-Shot prompt because it does not require any context to answer.
+For example, the prompt "What is the weather today?" is a One-Shot prompt because it requires some context to answer.
+
+Evaluate the following prompt and provide the type of prompt it inside of <type></type> tags.
+Then, evaluate if the prompt needs more content or would perform better as a different type of prompt.
+Suggest which type of prompt the input prompt should be in <evaluation></evaluation> tags. 
+Provide a "Yes" or "No" if the prompt is the correct type inside of <correct></correct> tags.
+If the answer is "No", rewrite a suggestion for how to improve the prompt inside of <suggestion></suggestion> tags. 
+If the answer is "Yes", include the <suggestion></suggestion> tags but leave them empty. 
+If the prompt needs more examples, do not make them up inside of the suggestion and instead include placeholder text like "Example 1" and "Example 2" inside of the suggestion.
+Responses inside of the tags should not contain any newlines.
+Always include the tags.
+
+<golden_answer>
+
+</golden_answer>
+
+<current_answer>
+
+</current_answer>

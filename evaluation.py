@@ -28,7 +28,9 @@ Always include the tags.
 """
 
 scoring_tempalate = """
-Your role is to evaluate a given input prompt in <prompt></prompt> tags and provide a score for each rubric.
+Assume the role of a prompt engineer.
+Your role is to score a given input prompt according to the following rubrics.
+For each of these rubrics, provide a score from 1 to 5, where 1 is the worst and 5 is the best. 
 The rubrics are:
 - Be clear and direct (<clarity></clarity>)
 - Be concise (<conciseness></conciseness>)
@@ -39,18 +41,18 @@ The rubrics are:
 - Avoid redundancy (<redundancy></redundancy>)
 - Avoid ambiguity (<ambiguity></ambiguity>)
 
-For each of these rubrics, provide a score from 1 to 5, where 1 is the worst and 5 is the best. 
 Include the score inside of the tags and always incldue the tags.
+Only reply with the tags and the scores in them.
 """
 
 type_inference_prompt = prompt = ChatPromptTemplate.from_messages([
     ("system", type_inference_template),
-    ("user", "The prompt is: {input}")
+    ("user", "The prompt is: \n {input}")
 ])
 
 scoring_prompt = prompt = ChatPromptTemplate.from_messages([
     ("system", scoring_tempalate),
-    ("user", "The prompt is: {prompt}")
+    ("user", "The prompt is: \n {prompt}")
 ])
 
 def evaluate_prompt_type(prompt):
