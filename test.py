@@ -61,7 +61,7 @@ comparison_prompt = prompt = ChatPromptTemplate.from_messages([
     ("user", comparison_template_user)
 ])
 
-llm = ChatAnthropic(model="claude-3-sonnet-20240229", temperature=0.2, max_tokens=1024)
+llm = ChatAnthropic(model="claude-3-opus-20240229", temperature=0.2, max_tokens=1024)
 
 def compare_prompts(reference_prompt, reference_output, candidate_prompt, candidate_output):
   chain = comparison_prompt | llm | StrOutputParser() 
