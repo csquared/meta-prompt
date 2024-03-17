@@ -1,7 +1,8 @@
-# PIT: Prompt Improvemnt Tool
+# Meta-Prompt: Use prompts to improve your prompts
 
-Introductory project to get started with prompt engineering. 
-Let's use prompt engineering to improve our prompts!
+Let's use prompt engineering to improve our prompts.
+
+Right now working out the best prompts for prompt improvement.
 
 Initial goals:
 - [x] Assess the type of prompt provided as a text file
